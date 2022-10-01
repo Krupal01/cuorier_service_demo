@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Georgia',
         textTheme: const TextTheme(
-          headline1: TextStyle(color : Colors.lightBlueAccent,fontSize: 72.0, fontWeight: FontWeight.bold),
+          headline1: TextStyle(color : Colors.white,fontSize: 72.0, fontWeight: FontWeight.bold),
           headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
           bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
         ),
