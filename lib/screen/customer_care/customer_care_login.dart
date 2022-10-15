@@ -11,16 +11,42 @@ class CustomerCareLogin extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
       ),
-      child: SizedBox(
-        height: 500,
-        width: double.infinity,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: const [
-              Text("customer care"),
-            ],
-          ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              "Customer care",
+              style: Theme.of(context).textTheme.headline6,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const TextField(
+              decoration: InputDecoration(
+                labelText: 'Enter your username',
+                hintText: "username",
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const TextField(
+              decoration: InputDecoration(
+                labelText: 'Enter your password',
+                hintText: 'password',
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () => {},
+              child: const Text("Login"),
+            ),
+          ],
         ),
       ),
     );

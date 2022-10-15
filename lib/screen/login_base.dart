@@ -11,6 +11,8 @@ class LoginBaseScreen extends StatelessWidget {
   final CarouselController buttonCarouselController = CarouselController();
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery. of(context). size. width ;
+    double height = MediaQuery. of(context). size. height;
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -25,15 +27,19 @@ class LoginBaseScreen extends StatelessWidget {
           ),
           CarouselSlider(
             carouselController: buttonCarouselController,
-            items: const [AdminLogin(), CustomerCareLogin(), ScannerBoyLogin()],
+            items: const [
+              AdminLogin(),
+              CustomerCareLogin(),
+              ScannerBoyLogin(),
+            ],
             options: CarouselOptions(
               enableInfiniteScroll: false,
               autoPlay: false,
               reverse: false,
               enlargeCenterPage: true,
               viewportFraction: 0.9,
-              aspectRatio: 2.0,
               initialPage: 0,
+              height: height * 0.40,
               scrollDirection: Axis.horizontal,
             ),
           ),
@@ -41,9 +47,8 @@ class LoginBaseScreen extends StatelessWidget {
             height: 50,
           ),
           FloatingActionButton(
-            onPressed: () => {
-              buttonCarouselController.nextPage(curve: Curves.linear)
-            },
+            onPressed: () =>
+                {buttonCarouselController.nextPage(curve: Curves.linear)},
             child: Icon(
               Icons.arrow_circle_right,
               color: Theme.of(context).primaryColor,
